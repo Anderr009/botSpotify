@@ -11,8 +11,10 @@ class mailRandom:
     domainXpth = "/html/body/div/div[2]/main/div/div[2]/div/div[1]/div[1]/div/span[2]"
     page = "https://yopmail.com/es/email-generator"
     options = Options()
-    def __init__(self) :
-        self.options.add_argument('--headless') 
+
+    def __init__(self):
+        self.options.add_argument('--headless')
+
     def sendMail(self):
         driver = webdriver.Edge(options=self.options)
         driver.get(self.page)
@@ -20,9 +22,10 @@ class mailRandom:
         driver.close()
         return mail
 
-    def extractTxt(self,driver,path):
-        txt = driver.find_element(By.XPATH,path)
+    def extractTxt(self, driver, path):
+        txt = driver.find_element(By.XPATH, path)
         return txt.text
+
     def detectElementByXpath(self, driver, path):
         try:
             driver.find_element(By.XPATH, path)
@@ -37,7 +40,3 @@ class mailRandom:
     def clickBtnByXpath(self, driver, path):
         element = driver.find_element(By.XPATH, path)
         element.click()
-
-#test area
-mail = mailRandom()
-print(mail.sendMail())
