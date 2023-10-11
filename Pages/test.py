@@ -9,9 +9,9 @@ edge_options.use_chromium = True  # Utiliza el motor Chromium de Edge
 # Ruta a la carpeta que contiene la extensión (cambia esto a tu ruta real)
 extension_path = './Extensiones/hCAPTCHA-Solver-auto-captcha-bypass.crx'
 
-# Agrega la extensión a las opciones de Edge
+# # Agrega la extensión a las opciones de Edge
 edge_options.add_extension(extension_path)
-edge_options.add_argument("--user-data-dir=./")
+edge_options.add_argument("--user-data-dir=C:/Users/Diego/AppData/Local/Microsoft/Edge/User Data")
 
 # Inicializa el servicio de Edge (cambia la ruta al ejecutable de Edge a tu ubicación real)
 
